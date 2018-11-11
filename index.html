@@ -1,0 +1,150 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font: 400 15px/1.8 "Lato", sans-serif;
+            color: #777;
+        }
+
+        .bgimg-1, .bgimg-2, .bgimg-3 {
+            position: relative;
+            opacity: 0.65;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bgimg-1 {
+            background-image: url("img/lake.jpg");
+            min-height: 100%;
+        }
+
+        .bgimg-2 {
+            background-image: url("img/me.jpg");
+            min-height: 400px;
+        }
+
+        .bgimg-3 {
+            background-image: url("img/tree.jpg");
+            min-height: 400px;
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+
+        .caption span.border {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 10px;
+        }
+
+        h3 {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font: 20px "Lato", sans-serif;
+            color: #111;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1024px) {
+            .bgimg-1, .bgimg-2, .bgimg-3 {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+                typeWriter();
+        });
+    </script>
+    <script>
+        var i = 0;
+        var txt = 'I\'m a passionate developer of 27 years from Hamburg. The technologies I like especially are Java (Spring),\n' +
+            '        Javascript (ReactJS, VueJs).\n' +
+            '        I am working for a logistics company called Kuehne und Nagel.';
+        var speed = 20;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("typewriter").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+<div class="bgimg-1">
+    <div class="caption">
+        <span class="border">I AM CHRISTIAN LEHR</span>
+    </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h3 id="hi" style="text-align:center;" onclick="typeWriter()">Hi, this is me!</h3>
+    <p id="typewriter"></p>
+</div>
+
+<div class="bgimg-2">
+    <div class="caption">
+        <a href="#"><span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SEE MY PROJECTS</span></a>
+    </div>
+</div>
+
+<div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+        <p>Currently I am learning new stuff like
+            Python, Japanese, Russian, Chinese
+            and I want to dive more into the topics machine learning/AI and also micro services. In my free time I enjoy hanging
+            out with friends, travelling, cooking, doing photos of things I like, exploring new things/ideas,
+            being creative or just going out dancing :)</p>
+    </div>
+</div>
+
+<div class="bgimg-3">
+    <div class="caption">
+        <a href="#"><span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SEE SOME OF MY PHOTOS</span></a>
+    </div>
+</div>
+
+<div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+        <p>If you like you can follow me on twitter, instagram and facebook</p>
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-flickr"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+</div>
+
+<div class="bgimg-1">
+    <div class="caption">
+        <span class="border">GLAD TO HEAR FROM YOU!</span>
+    </div>
+</div>
+
+</body>
+</html>
