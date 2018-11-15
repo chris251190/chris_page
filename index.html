@@ -2,6 +2,35 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        body {margin:0}
+
+        .icon-bar {
+            z-index: 1;
+            position: fixed;
+            top: 0;
+            left: 0px;
+
+            width: 90px;
+            background-color: #555;
+        }
+
+        .icon-bar a {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 36px;
+        }
+
+        .icon-bar a:hover {
+            background-color: #000;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
         body, html {
             height: 100%;
             margin: 0;
@@ -96,6 +125,14 @@
 </head>
 <body>
 
+<div class="icon-bar">
+    <a class="active" href="index.html"><i class="fa fa-home"></i></a>
+    <a href="projects.html"><i class="fa fa-search"></i></a>
+    <a href="photos.html"><i class="fa fa-envelope"></i></a>
+    <a href="#"><i class="fa fa-globe"></i></a>
+    <a href="#"><i class="fa fa-trash"></i></a>
+</div>
+
 <div class="bgimg-1">
     <div class="caption">
         <span class="border">I AM CHRISTIAN LEHR</span>
@@ -125,7 +162,7 @@
 
 <div class="bgimg-3">
     <div class="caption">
-        <a href="images.html"><span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SEE SOME OF MY PHOTOS</span></a>
+        <a href="photos.html"><span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SEE SOME OF MY PHOTOS</span></a>
     </div>
 </div>
 
